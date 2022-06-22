@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AlquranController;
+use App\Http\Controllers\Api\AlquranController_v2;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,11 @@ Route::prefix('apis')->group(function() {
 	    Route::get('surah/{id}', [AlquranController::class, 'showAyatBySurah']);
 	    Route::get('juz', [AlquranController::class, 'showJuz']);
 	    Route::get('juz/{id}', [AlquranController::class, 'showAyatByJuz']);
+	});
+	Route::prefix('v2')->group(function() {
+	    Route::get('surah', [AlquranController_v2::class, 'showSurah']);
+	    Route::get('surah/{id}', [AlquranController_v2::class, 'showAyatBySurah']);
+	    Route::get('juz', [AlquranController_v2::class, 'showJuz']);
+	    Route::get('juz/{id}', [AlquranController_v2::class, 'showAyatByJuz']);
 	});
 });
