@@ -15,7 +15,7 @@ class AlquranController_v2 extends Controller
     {
         $result=array();
         $surah = Surah::all();
-        if ($surah !== null) {
+        if (!$surah->isEmpty()) {
             $result['status_code'] = 200;
             $result['status_message'] = 'Success, request data approved';
             $result['data'] = $surah;
@@ -30,7 +30,7 @@ class AlquranController_v2 extends Controller
     {
         $result=array();
         $juz = Juz::all();
-        if ($juz !== null) {
+        if (!$juz->isEmpty()) {
             $result['status_code'] = 200;
             $result['status_message'] = 'Success, request data approved';
             $result['data'] = $juz;
@@ -46,7 +46,7 @@ class AlquranController_v2 extends Controller
         $result=array();
         $ayat = Ayat::select(['id', 'id_surah', 'no_ayat', 'no_arab', 'ayat', 'latin', 'arti'])
         ->where('id_surah', $id)->get();
-        if ($ayat !== null) {
+        if (!$ayat->isEmpty()) {
             $result['status_code'] = 200;
             $result['status_message'] = 'Success, request data approved';
             $result['data'] = $ayat;
@@ -62,7 +62,7 @@ class AlquranController_v2 extends Controller
         $result=array();
         $ayat = Ayat::select(['id', 'id_surah', 'no_ayat', 'no_arab', 'ayat', 'latin', 'arti'])
                         ->where('id_juz', $id)->get();
-        if ($ayat !== null) {
+        if (!$ayat->isEmpty()) {
             $result['status_code'] = 200;
             $result['status_message'] = 'Success, request data approved';
             $result['data'] = $ayat;

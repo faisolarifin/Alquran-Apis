@@ -16,7 +16,7 @@ use App\Http\Controllers\Api\AlquranController_v2;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::prefix('apis')->group(function() {
