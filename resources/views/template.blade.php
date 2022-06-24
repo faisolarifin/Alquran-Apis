@@ -8,8 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
+    <link rel="icon" href="{{ asset('assets/alquran.png') }}" type="image/jpg" />
 
-    <title>Alquran Apis | Documentation by Faisol Arifin</title>
+    <title>Al-Qur'an API | Documentation by Faisol Arifin</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/stroke.css') }}">
