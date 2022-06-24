@@ -45,7 +45,7 @@
                 <div class="col-md-3">
                     <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                         <ul class="nav">
-                            <li><a href="#line1">Memulai</a></li>
+                            <li><a href="#line1">Pengenalan</a></li>
                             <li><a href="#line2">Mendapatkan Surah</a></li>
                             <li><a href="#line3">Mendapatkan Juz</a></li>
                             <li><a href="#line4">Data Ayat Berdasarkan Surah</a></li>
@@ -57,7 +57,7 @@
                     </nav >
                 </div>
                 <div class="col-md-9">
-                    <section class="welcome section">
+                    <section class="welcome section" id="line1">
 
                         <div class="row">
                             <div class="col-md-12 left-align">
@@ -68,8 +68,7 @@
                                         <div>
                                             <p>Open Al-Quran APIs merupakan layanan terbuka yang menyediakan surah-surah Al-Qur'an. Layanan ini dapat diakses secara public tanpa harus melakukan autentikasi dan autorisasi terlebih dahulu. Surah Al-Quran kami disediakan bentuk output API dengan format json, sehingga akan lebih mudah untuk parsing. API ini dapat dikonsumsi pada server side maupun pada elemen client side dalam mengembangkan aplikasi baik berbasis Web, Desktop maupun Mobile. Adanya Open API ini diharapkan dapat membantu para developer App dalam mengembangkan aplikasi Al-Quran.</p>
                                             <div class="intro2 clearfix">
-                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while editing the template. If not edited properly, the design layout may break completely.
-                                                    <br> No support is provided for faulty customization.
+                                                <p><i class="fa fa-exclamation-triangle"></i> Kami harap API Al-Quran ini dapat digunakan sebaik mungkin, sehingga dapat memberikan manfaat bagi kita semua.
                                                 </p>
                                             </div>
 
@@ -244,7 +243,7 @@
                             <div class="col-md-12 text-center">
 
                                 <img src="{{ asset('assets/images/faisol.jpg') }}" alt=".." style="max-width:150px;border-radius:50%;margin-top:20px;">    
-                                <p style="padding-bottom: 0;">Ach. Faisol S. Arifin</p>
+                                <p style="padding-bottom: 0;margin-top:8px;">Ach. Faisol S. Arifin</p>
                                 <p>faisolofficial99@gmail.com</p>
 
                             </div>

@@ -13,7 +13,7 @@
     IMPORT  
 ------------------------------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;1,200&display=swap');
 /* ----------------------------------------------------
     SKELETON    
 ------------------------------------------------------- */
@@ -40,6 +40,7 @@ h6 {
     font-weight: normal;
     line-height: 1.8;
     color: #242424;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -69,6 +70,7 @@ h6 {
     font-size: 14px;
 }
 
+
 h1 a,
 h2 a,
 h3 a,
@@ -80,11 +82,12 @@ h6 a {
 
 p {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 26px;
     letter-spacing: 0;
     margin-top: 0;
     margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 img.aligncenter {
@@ -102,9 +105,14 @@ ul {
     list-style: none;
 }
 
+li a {
+    font-family: 'Poppins', sans-serif;
+}
+
 ol li ul li {
     padding-left: 20px;
 }
+
 
 img.alignleft {
     float: left;
