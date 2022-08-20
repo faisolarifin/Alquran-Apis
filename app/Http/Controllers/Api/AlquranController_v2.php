@@ -3,74 +3,80 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Ayat;
-use App\Models\Juz;
-use App\Models\Surah;
-use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Null_;
+use App\Models\{Ayat, Juz, Surah};
 
 class AlquranController_v2 extends Controller
 {
     public function showSurah()
     {
-        $result=array();
         $surah = Surah::all();
         if (!$surah->isEmpty()) {
-            $result['status_code'] = 200;
-            $result['status_message'] = 'Success, request data approved';
-            $result['data'] = $surah;
-        } else {
-            $result['status_code'] = 403;
-            $result['status_message'] = 'Failure, request data rejected';
+            return response()->json([
+                'code' => 200,
+                'message' => 'Success, request data approved.',
+                'data' => $surah,
+            ]);
         }
-        return response()->json($result);
+        return response()->json([
+            'code' => 201,
+            'message' => 'Failure, request data rejected.'
+        ]);
     }
 
     public function showJuz()
     {
-        $result=array();
         $juz = Juz::all();
         if (!$juz->isEmpty()) {
-            $result['status_code'] = 200;
-            $result['status_message'] = 'Success, request data approved';
-            $result['data'] = $juz;
-        } else {
-            $result['status_code'] = 403;
-            $result['status_message'] = 'Failure, request data rejected';
+            return response()->json([
+                'code' => 200,
+                'message' => 'Success, request data approved.',
+                'data' => $juz,
+            ]);
         }
-        return response()->json($result);
+        return response()->json([
+            'code' => 201,
+            'message' => 'Failure, request data rejected.'
+        ]);
     }
     
     public function showAyatBySurah($id)
     {
-        $result=array();
+        $basmalah = array(
+            'arab' => "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+            'latin' => "Bismillāhir-raḥmānir-raḥīm(i).",
+            'arti' => "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.",
+        );
         $ayat = Ayat::select(['id', 'id_surah', 'no_ayat', 'no_arab', 'ayat', 'latin', 'arti'])
         ->where('id_surah', $id)->get();
         if (!$ayat->isEmpty()) {
-            $result['status_code'] = 200;
-            $result['status_message'] = 'Success, request data approved';
-            $result['data'] = $ayat;
-        } else {
-            $result['status_code'] = 403;
-            $result['status_message'] = 'Failure, request data rejected';
+            return response()->json([
+                'code' => 200,
+                'message' => 'Success, request data approved.',
+                'basmalah' => (!in_array($id, array(1, 9))) ? $basmalah : null,
+                'data' => $ayat,
+            ]);
         }
-        return response()->json($result);
+        return response()->json([
+            'code' => 201,
+            'message' => 'Failure, request data rejected.'
+        ]);
     }
     
     public function showAyatByJuz($id)
     {
-        $result=array();
         $ayat = Ayat::select(['id', 'id_surah', 'no_ayat', 'no_arab', 'ayat', 'latin', 'arti'])
                         ->where('id_juz', $id)->get();
         if (!$ayat->isEmpty()) {
-            $result['status_code'] = 200;
-            $result['status_message'] = 'Success, request data approved';
-            $result['data'] = $ayat;
-        } else {
-            $result['status_code'] = 403;
-            $result['status_message'] = 'Failure, request data rejected';
+            return response()->json([
+                'code' => 200,
+                'message' => 'Success, request data approved.',
+                'data' => $ayat,
+            ]);
         }
-        return response()->json($result);
+        return response()->json([
+            'code' => 201,
+            'message' => 'Failure, request data rejected.'
+        ]);
     }
     
 }

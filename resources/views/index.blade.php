@@ -95,7 +95,7 @@
                             <div class="col-md-12">
                                 <p>Daftar Surah Al-Quran terdapat 114 Surah yang dapat diakses melalui endpoint berikut :</p>
                                 <pre class="brush: html">
-                                    https://alquranapi.herokuapp.com/apis/v1/surah/
+                                    https://alquranapi.herokuapp.com/apis/v2/surah/
                                 </pre>
                                 <p>Endpoint tersebut mengembalikan nilai json yang berisi, Nama Surah Latin dan Arab, Arti, Jumlah Ayat dan Tepat Diturunkannya (Makkiyah/Madaniyah)</p>
                                 <img src="{{ asset('assets/images/surah.jpg') }}" alt="..">
@@ -120,7 +120,7 @@
                             <div class="col-md-12">
                                 <p>Daftar Juz Al-Quran terdapat 30 Juz yang dapat diakses melalui endpoint berikut:</p>
                                 <pre class="brush: html">
-                                    https://alquranapi.herokuapp.com/apis/v1/juz/
+                                    https://alquranapi.herokuapp.com/apis/v2/juz/
                                 </pre>
                                 <p>Endpoint tersebut mengembalikan nilai json yang berisi Nama Juz Latin dan Arab.</p>
                                 <img src="{{ asset('assets/images/juz.jpg') }}" alt="..">
@@ -146,7 +146,7 @@
                             <div class="col-md-12">
                                 <p>Untuk mendapatkan ayat-ayat dalam satu Surah dapat mengakses melalui endpoint yang serupa dengan akses daftar Surah. Akses terhadap ayat berdasarkan Surah dapat ditambahkan {id} pada segment terakhir. {id} tersebut merujuk merujuk pada nomer Surah Al-Qur’an.</p>
                                 <pre class="brush: html">
-                                    https://alquranapi.herokuapp.com/apis/v1/surah/{id}
+                                    https://alquranapi.herokuapp.com/apis/v2/surah/{id}
                                 </pre>
                                 <p>Endpoint akan mengembalikan json berisikan, Nomer Surah Latin + Arab, Ayat Latin + Arab, dan Terjemahannya</p>
                                 <img src="{{ asset('assets/images/ayatbysurah.jpg') }}" alt="..">
@@ -171,7 +171,7 @@
                             <div class="col-md-12">
                                 <p>Untuk mendapatkan ayat-ayat dalam satu Juz dapat mengakses melalui endpoint yang serupa dengan akses daftar Juz. Akses terhadap ayat berdasarkan Juz dapat dilakukan dengan menambahkan {id} pada segment terakhir, {id} tersebut merujuk merujuk pada nomer Juz Al-Qur’an.</p>
                                 <pre class="brush: html">
-                                    https://alquranapi.herokuapp.com/apis/v1/juz/{id}
+                                    https://alquranapi.herokuapp.com/apis/v2/juz/{id}
                                 </pre>
                                 <p>Endpoint juga mengembalikan ayat dalam satu Juz dalam bentu json berisikan, Nomer Surah Latin + Arab, Ayat Latin + Arab, serta Terjemahannya.</p>
                                 <img src="{{ asset('assets/images/ayatbyjuz.jpg') }}" alt="..">
